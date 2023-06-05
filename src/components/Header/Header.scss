@@ -1,0 +1,33 @@
+.header {
+  min-height: 50px;
+  background-color: #f1f1f1;
+  margin-bottom: 25px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.left-block {
+  margin: 10px;
+  width: 181px;
+  height: 37px;
+  left: 46px;
+  top: 26px;
+  background: #f1f2ae;
+}
+
+.right-blocks {
+  display: flex;
+  margin: 10px;
+
+  &__icon {
+    width: 46px;
+    height: 37px;
+    background: #e7efd6;
+    margin-left: 10px;
+  }
+}
+
+  
