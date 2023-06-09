@@ -1,6 +1,6 @@
 .header {
   min-height: 50px;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   margin-bottom: 25px;
 
   &__container {
@@ -23,8 +23,11 @@
   margin: 10px;
 
   &__icon {
-    width: 46px;
-    height: 37px;
+    vertical-align: auto;
+    min-width: 46px;
+    height: auto;
+    padding: 10px;
+    border-radius: 20%;
     background: #e7efd6;
     margin-left: 10px;
   }
