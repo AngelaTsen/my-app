@@ -1,0 +1,13 @@
+@import "./_variables.scss";
+@import "./_mixins.scss";
+@import "./_responsive.scss";
+
+.title {
+    @include fonts($font-m,32px,700, 52px, $violet);
+    @include md {
+        @include fonts($font-m,26px,700, 36px, $violet);
+    }  
+    @include ssm {
+        @include fonts($font-m,22px,700, 32px, $violet);
+    }  
+  }

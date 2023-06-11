@@ -1,3 +1,9 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+* {
+  transition: all 0.3s ease-in-out;
+}
 .header {
   min-height: 50px;
   background-color: #ffffff;
@@ -9,13 +15,12 @@
   }
 }
 
-.left-block {
+.logo-block {
   margin: 10px;
   width: 181px;
   height: 37px;
   left: 46px;
   top: 26px;
-  background: #f1f2ae;
 }
 
 .right-blocks {
@@ -23,14 +28,43 @@
   margin: 10px;
 
   &__icon {
-    vertical-align: auto;
-    min-width: 46px;
-    height: auto;
-    padding: 10px;
-    border-radius: 20%;
-    background: #e7efd6;
-    margin-left: 10px;
+    margin: 20px;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      align-items: center;
+      background: $violet;
+      border: 0;
+      border-radius: 30px;
+      color: $white;
+      cursor: pointer;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      @include fonts ($font-m, 18px, 500, 26px, $white);
+      justify-content: center;
+      line-height: 1;
+      min-height: 54px;
+      min-width: 120px;
+      padding: 10px;
+      text-align: center;
+      vertical-align: middle;
+      text-decoration: none;
+   
+  }
+  &__icon:hover {
+    color: $violet;
+   background-color:$white;
+   border: 3px solid $violet;
   }
 }
 
+
   
+.main-banner{
+  background: url(../../images/head.jpg);
+  height: 350px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}

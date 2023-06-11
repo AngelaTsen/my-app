@@ -1,0 +1,9 @@
+@use "./variables";
+
+@mixin fonts ($family, $size, $weight, $lheight, $color ) {
+    font-size: $size;
+    color: $color;
+    font-family: $family;
+    font-weight: $weight;
+    line-height: $lheight;
+  }
