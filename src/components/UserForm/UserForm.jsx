@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Button, Form, CardDeck, Col, Row  } from "react-bootstrap";
+import "./UserForm.scss";
+import { SliderMyCard } from "../SliderMy/SliderMyCard/SliderMyCard";
+
 
 export const UserForm = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -18,39 +21,48 @@ export const UserForm = () => {
       .then((response) => response.json())
       .then((data) => {
         if (!data.meals) {
-          setError("Нічого не знайдено :(");
+          setError("Nothing found :(");
         } else {
           setResults(data.meals);
         }
       })
       .catch((error) => {
-        console.error("Сталася помилка:", error);
-        setError("Сталася помилка. Будь ласка, спробуйте пізніше.");
+        console.error("An error occurred:", error);
+        setError("An error occurred. Please try again later.");
       });
   };
 
   return (
     <div>
-      <Form.Group className="mb-3">
+      <Form.Group className="mb-3" >
         <Form.Control
+        className="search-form"
           type="text"
           id="input-search"
-          placeholder="Введіть пошуковий запит"
+          placeholder="Enter the name of the meal or ingredient"
           value={searchTerm}
           onChange={handleInputChange}
         />
       </Form.Group>
-      <Button variant="outline-secondary" onClick={handleSearch}>
+      <Button className="btn-search" variant="outline-secondary" onClick={handleSearch}>
         Search
       </Button>
 
       {results.length > 0 && (
         <div>
-          <h3>Результати:</h3>
-          {results.map((meal) => (
-            <div key={meal.idMeal}>{meal.strMeal}</div>
+        <h3>Результати:</h3>
+        <Row>
+          {results.map((item) => (
+            <Col key={item.idMeal} xs={6} md={4} lg={3}>
+              <SliderMyCard
+                strMeal={item.strMeal}
+                strCategory={item.strCategory}
+                strMealThumb={item.strMealThumb}
+              />
+            </Col>
           ))}
-        </div>
+        </Row>
+      </div>
       )}
 
       {error && <div>{error}</div>}

@@ -8,12 +8,15 @@ import { SliderMy } from "./components/SliderMy/SliderMy";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Recipe } from "./pages/Recipe";
+import { ButtonA1 } from "./components/Buttons/ButtonA1";
+
 const App = () => {
   return (
     <>
     <BrowserRouter>
+
       <Header class="header"></Header>
-    
+
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/recipe" element={<Recipe />} />
@@ -21,7 +24,9 @@ const App = () => {
     
       <div className="title">Сhoose a dish that you like</div>
       <SliderMy></SliderMy>
+
     </BrowserRouter>
+
     </>
   );
 };

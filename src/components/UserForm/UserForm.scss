@@ -1,0 +1,58 @@
+@import "../../styles/variables";
+
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-search {
+    display: flex;
+  justify-content: center;
+  --bs-btn-color: $violet;
+  --bs-btn-border-color: $violet;
+  --bs-btn-disabled-color: $violet;
+  --bs-btn-disabled-border-color: $violet;
+  border: 2px solid $violet;
+}
+.btn-search:hover {
+    background-color: $violet;
+
+}
+.search-form{
+    margin: 0 auto;
+    max-width: 70%;
+     height: 60px; 
+}
+.search-form:active {
+    border: 5px solid $violet1;
+}
+.search-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.search-input-container {
+  position: relative;
+  flex-grow: 1;
+  max-width: 70%; /* Максимальна ширина контейнера */
+}
+
+.search-form {
+  width: 100%;
+  height: 60px; /* Висота поля пошуку */
+  padding-right: 3rem; /* Додатковий простір справа для кнопки та іконки */
+  margin: 0 auto; /* Центрування по горизонталі */
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.search-button {
+  margin-left: 1rem;
+}
