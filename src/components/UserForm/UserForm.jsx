@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Button, Form, Col, Row} from "react-bootstrap";
 import "./UserForm.scss";
-import { Catalog } from "../../pages/Catalog";
+import {Catalog} from "../../pages/Сatalog";
+import { ButtonA3 } from "../Buttons/ButtonA3";
+import  "../../images/search.png";
+
+
 // import { SliderMyCard } from "../SliderMy/SliderMyCard/SliderMyCard";
 
 
@@ -50,23 +54,14 @@ export const UserForm = () => {
     />
     <img className="search-icon" src="../../images/search.png" alt="Картинка" />
   </div>
+  {/* <ButtonA3 text="Search" for="search-form" variant="outline-secondary" onClick={handleSearch} /> */}
+
   <Button className="btn-search" variant="outline-secondary" onClick={handleSearch}>
         Search
-      </Button></Form.Group>
-      
-      {/* <Form.Group className="mb-3" >
-        <Form.Control
-        className="search-form"
-          type="text"
-          id="input-search"
-          placeholder="Enter the name of the meal or ingredient"
-          value={searchTerm}
-          onChange={handleInputChange}
-        />
+      </Button>
       </Form.Group>
-      <Button className="btn-search" variant="outline-secondary" onClick={handleSearch}>
-        Search
-      </Button> */}
+      
+      
 
       {results.length > 0 && (
         <div>
