@@ -5,12 +5,11 @@
 }
 
 .btn-search {
-    display: flex;
-  justify-content: center;
   --bs-btn-color: $violet;
   --bs-btn-border-color: $violet;
   --bs-btn-disabled-color: $violet;
   --bs-btn-disabled-border-color: $violet;
+  color:  $violet;
   border: 2px solid $violet;
 }
 .btn-search:hover {

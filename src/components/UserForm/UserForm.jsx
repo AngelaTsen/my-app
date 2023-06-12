@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Button, Form, CardDeck, Col, Row  } from "react-bootstrap";
+import { Button, Form, Col, Row} from "react-bootstrap";
 import "./UserForm.scss";
-import { SliderMyCard } from "../SliderMy/SliderMyCard/SliderMyCard";
+import { Catalog } from "../../pages/Catalog";
+// import { SliderMyCard } from "../SliderMy/SliderMyCard/SliderMyCard";
 
 
 export const UserForm = () => {
@@ -33,8 +34,27 @@ export const UserForm = () => {
   };
 
   return (
+
+
+
     <div>
-      <Form.Group className="mb-3" >
+<Form.Group className="mb-3 search-group">
+  <div className="search-input-container">
+    <Form.Control
+      className="search-form"
+      type="text"
+      id="input-search"
+      placeholder="Enter the name of the meal or ingredient"
+      value={searchTerm}
+      onChange={handleInputChange}
+    />
+    <img className="search-icon" src="../../images/search.png" alt="Картинка" />
+  </div>
+  <Button className="btn-search" variant="outline-secondary" onClick={handleSearch}>
+        Search
+      </Button></Form.Group>
+      
+      {/* <Form.Group className="mb-3" >
         <Form.Control
         className="search-form"
           type="text"
@@ -46,7 +66,7 @@ export const UserForm = () => {
       </Form.Group>
       <Button className="btn-search" variant="outline-secondary" onClick={handleSearch}>
         Search
-      </Button>
+      </Button> */}
 
       {results.length > 0 && (
         <div>
@@ -54,7 +74,7 @@ export const UserForm = () => {
         <Row>
           {results.map((item) => (
             <Col key={item.idMeal} xs={6} md={4} lg={3}>
-              <SliderMyCard
+              <Catalog
                 strMeal={item.strMeal}
                 strCategory={item.strCategory}
                 strMealThumb={item.strMealThumb}

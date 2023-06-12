@@ -4,7 +4,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import { ButtonA2 } from "../../Buttons/ButtonA2";
 import { Card } from 'react-bootstrap';
 
-
 export const SliderMyCard = ({ strMeal, strCategory, strMealThumb }) => (
       <Card style={{ width: '10rem' }}>
         <Card.Img variant="top" src={strMealThumb} />
