@@ -3,11 +3,48 @@
 @import "./_responsive.scss";
 
 .title {
-    @include fonts($font-m,32px,700, 52px, $violet);
+    @include fonts($font-m,19px,500, 22px, $violet);
+    margin: 20px;
     @include md {
-        @include fonts($font-m,26px,700, 36px, $violet);
+        @include fonts($font-m,16px,500, 19px, $violet);
     }  
     @include ssm {
-        @include fonts($font-m,22px,700, 32px, $violet);
+        @include fonts($font-m,12px,500,16px, $violet);
     }  
   }
+  
+  .home {
+    text-align: center;
+    padding-inline: 15%;
+    &__h1 {
+    @include fonts($font-m,32px,700, 52px, $violet);
+
+}
+&__p {
+    @include fonts($font-m,16px,400, 21px, #000);
+
+}}
+
+.categories {
+    @include fonts($font-m,22px,500, 52px, $violet);
+    display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  gap: 10px;
+ 
+    &__img {
+        max-width: 200px;
+        border-radius: 20%;
+        // border: 1px solid $violet;
+        margin-inline: 10px;
+    }
+    &__h3 {
+        @include fonts($font-m,16px,700, 22px, $violet);
+        margin-inline: 10px;
+        text-align: center;
+
+    }
+}

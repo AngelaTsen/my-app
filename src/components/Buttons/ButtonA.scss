@@ -76,3 +76,19 @@ color: $violet;
     color: $white ;
     // @include fonts ($font-m, 14px, 300, 18px, $white);
 }
+
+
+  .btn-a4 {
+  @include fonts ($font-m, 14px, 300, 18px, $violet);
+  background-color: $white;
+  border-radius: 30px;
+  min-height: 35px;
+  min-width: 90px;
+border: 2px solid $violet;
+
+}
+.btn-a4:hover {
+  background-color: $violet;
+  color: $white ;
+  // @include fonts ($font-m, 14px, 300, 18px, $white);
+}
