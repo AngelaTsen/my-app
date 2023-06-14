@@ -1,5 +1,7 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
+@import "../../styles/responsive";
+
 
 * {
   transition: all 0.3s ease-in-out;
@@ -63,7 +65,11 @@
   
 .main-banner{
   background: url(../../images/head.jpg);
-  height: 350px;
+  height: 500px;
   background-size: 100%;
   background-repeat: no-repeat;
+
+  @include md {
+    height: 300px;
+  }
 }

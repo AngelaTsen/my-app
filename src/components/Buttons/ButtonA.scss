@@ -15,15 +15,16 @@ cursor: pointer;
 display: -webkit-inline-box;
 display: -ms-inline-flexbox;
 display: inline-flex;
-@include fonts ($font-m, 18px, 500, 26px, $white);
+@include fonts ($font-m, 16px, 500, 26px, $white);
 justify-content: center;
 line-height: 1;
-min-height: 54px;
-min-width: 120px;
+min-height: 45px;
+min-width: 100px;
 padding: 10px;
 text-align: center;
 vertical-align: middle;
 text-decoration: none;
+cursor: pointer;
 }
 
 .btn-a1:hover {
@@ -84,7 +85,9 @@ color: $violet;
   border-radius: 30px;
   min-height: 35px;
   min-width: 90px;
-border: 2px solid $violet;
+border: 2px solid $violet1;
+display: block;
+margin: 0 auto;
 
 }
 .btn-a4:hover {

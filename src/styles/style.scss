@@ -3,48 +3,64 @@
 @import "./_responsive.scss";
 
 .title {
-    @include fonts($font-m,19px,500, 22px, $violet);
-    margin: 20px;
-    @include md {
-        @include fonts($font-m,16px,500, 19px, $violet);
-    }  
-    @include ssm {
-        @include fonts($font-m,12px,500,16px, $violet);
-    }  
+    padding-top: 5%;
+  @include fonts($font-m, 16px, 500, 22px, $violet);
+  margin: 20px;
+  @include md {
+    @include fonts($font-m, 16px, 500, 19px, $violet);
   }
-  
-  .home {
+  @include ssm {
+    @include fonts($font-m, 12px, 500, 16px, $violet);
+  }
+}
+.home {
+  .text {
     text-align: center;
     padding-inline: 15%;
+    padding-top:4%;
     &__h1 {
-    @include fonts($font-m,32px,700, 52px, $violet);
-
-}
-&__p {
-    @include fonts($font-m,16px,400, 21px, #000);
-
-}}
-
-.categories {
-    @include fonts($font-m,22px,500, 52px, $violet);
+      @include fonts($font-m, 32px, 700, 52px, $violet);
+    }
+    &__p {
+      @include fonts($font-m, 16px, 400, 21px, #000);
+    }
+  }
+  &__h2 {
+    @include fonts($font-m, 26px, 700, 52px, #4a4a4a);
+    text-align: center;
+    padding: 3%;
+  }
+  .categories {
+    cursor: pointer;
+    padding: 3%;
+    background-color: $violet1;
     display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  align-content: stretch;
-  gap: 10px;
- 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    gap: 10px;
+    //   width: 70%;
+
     &__img {
-        max-width: 200px;
-        border-radius: 20%;
-        // border: 1px solid $violet;
-        margin-inline: 10px;
-    }
-    &__h3 {
-        @include fonts($font-m,16px,700, 22px, $violet);
-        margin-inline: 10px;
-        text-align: center;
+      max-width: 70px;
+      text-align: center;
+      border-radius: 45%;
+      margin-inline: 10px;
+      border: 1px solid $violet1;
 
     }
+    &__img:hover {
+        border: 4px solid $violet;
+    }
+
+    &__h3 {
+      @include fonts($font-m, 14px, 700, 22px, $violet);
+      margin-inline: 10px;
+      text-align: center;
+      width: 65px;
+      padding-top: 15%;
+    }
+  }
 }

@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import { Button, Form, Col, Row} from "react-bootstrap";
+import { Button, Form, Col, Row } from "react-bootstrap";
 import "./UserForm.scss";
-import {Catalog} from "../../pages/Сatalog";
+import { Catalog } from "../../pages/Сatalog";
 import { ButtonA3 } from "../Buttons/ButtonA3";
-import  "../../images/search.png";
-
+import "../../images/search.png";
 
 // import { SliderMyCard } from "../SliderMy/SliderMyCard/SliderMyCard";
-
 
 export const UserForm = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -38,56 +36,55 @@ export const UserForm = () => {
   };
 
   return (
+    <div className="formConteiner">
+      <Form.Group className="mb-3 search-group">
+        <div className="search-input-container">
+          <Form.Control
+            className="search-form"
+            type="text"
+            id="input-search"
+            placeholder="Enter the name of the meal or ingredient"
+            value={searchTerm}
+            onChange={handleInputChange}
+          />
+          <img
+            className="search-icon"
+            src="../../images/search.png"
+            alt="Картинка"
+          />
+        </div>
+        {/* <ButtonA3 text="Search" for="search-form" variant="outline-secondary" onClick={handleSearch} /> */}
 
-
-
-    <div>
-<Form.Group className="mb-3 search-group">
-  <div className="search-input-container">
-    <Form.Control
-      className="search-form"
-      type="text"
-      id="input-search"
-      placeholder="Enter the name of the meal or ingredient"
-      value={searchTerm}
-      onChange={handleInputChange}
-    />
-    <img className="search-icon" src="../../images/search.png" alt="Картинка" />
-  </div>
-  {/* <ButtonA3 text="Search" for="search-form" variant="outline-secondary" onClick={handleSearch} /> */}
-
-  <Button className="btn-search" variant="outline-secondary" onClick={handleSearch}>
-        Search
-      </Button>
+        <Button
+          className="btn-search"
+          variant="outline-secondary"
+          onClick={handleSearch}
+        >
+          Search
+        </Button>
       </Form.Group>
-      
-      
 
       {results.length > 0 && (
         <div>
-        <h3>Результати:</h3>
-        <Row>
-          {results.map((item) => (
-            <Col key={item.idMeal} xs={6} md={4} lg={3}>
-              <Catalog
-                strMeal={item.strMeal}
-                strCategory={item.strCategory}
-                strMealThumb={item.strMealThumb}
-              />
-            </Col>
-          ))}
-        </Row>
-      </div>
+          <h3>Результати:</h3>
+          <Row>
+            {results.map((item) => (
+              <Col key={item.idMeal} xs={6} md={4} lg={3}>
+                <Catalog
+                  strMeal={item.strMeal}
+                  strCategory={item.strCategory}
+                  strMealThumb={item.strMealThumb}
+                />
+              </Col>
+            ))}
+          </Row>
+        </div>
       )}
 
       {error && <div>{error}</div>}
     </div>
   );
 };
-
-
-
-
 
 // import { useState } from "react";
 // import { Button } from "bootstrap";
@@ -137,9 +134,9 @@ export const UserForm = () => {
 //             placeholder="Enter Last Name"
 //           />
 //         </label>
-//       </div> 
+//       </div>
 //       <div className="mb-3">
-   
+
 //           <input
 //             onChange={({ target: { value } }) =>
 //               inputChangeHandler(Number(value), "age")
@@ -148,7 +145,7 @@ export const UserForm = () => {
 //             type="number"
 //             placeholder="Enter Age"
 //           />
-  
+
 //       </div>
 
 //       <button type="submit">Save</button>
@@ -169,6 +166,6 @@ export const UserForm = () => {
 //             placeholder="Search meal ..."
 //           />
 //     </form>
-    
+
 //   );
 // };

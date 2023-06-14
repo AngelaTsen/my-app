@@ -13,21 +13,26 @@ export const Home = () => {
   }, []);
 
   return (
-    <div>
-      <div className="home">
-        <h1 className="home__h1">Simple recipes for delicious dishes</h1>
-        <p className="home__p">
+    <div className="home">
+      <div className="text">
+        <h1 className="text__h1">Simple recipes for delicious dishes</h1>
+        <p className="text__p">
           Recipes for first and second courses, as well as desserts and salads.
           Thousands of ideas for what to cook for breakfast or dinner. Read,
           cook, enjoy. And don't forget to share your recipes.
         </p>
       </div>
+      <h2 className="home__h2">Categorys</h2>
       <div className="categories">
         {categories.map((category) => (
           <div key={category.idCategory}>
-            <img className="categories__img" src={category.strCategoryThumb} alt={category.strCategory} />
+            <img
+              className="categories__img"
+              src={category.strCategoryThumb}
+              alt={category.strCategory}
+            />
             <h3 className="categories__h3">{category.strCategory}</h3>
-            <ButtonA4 text ="See recipes"></ButtonA4>
+            {/* <ButtonA4 text ="See recipes"></ButtonA4> */}
           </div>
         ))}
       </div>
