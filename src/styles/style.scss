@@ -2,6 +2,10 @@
 @import "./_mixins.scss";
 @import "./_responsive.scss";
 
+.wrapper {
+  margin-inline: 5%;
+  }
+
 .title {
     padding-top: 5%;
   @include fonts($font-m, 16px, 500, 22px, $violet);
@@ -16,7 +20,7 @@
 .home {
   .text {
     text-align: center;
-    padding-inline: 15%;
+    padding-inline: 5%;
     padding-top:4%;
     &__h1 {
       @include fonts($font-m, 32px, 700, 52px, $violet);
@@ -40,11 +44,11 @@
     justify-content: center;
     align-items: center;
     align-content: stretch;
-    gap: 10px;
+    gap: 15px;
     //   width: 70%;
 
     &__img {
-      max-width: 70px;
+      max-width: 75px;
       text-align: center;
       border-radius: 45%;
       margin-inline: 10px;

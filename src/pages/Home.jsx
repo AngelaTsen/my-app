@@ -14,7 +14,7 @@ export const Home = () => {
 
   return (
     <div className="home">
-      <div className="text">
+      <div className="text wrapper">
         <h1 className="text__h1">Simple recipes for delicious dishes</h1>
         <p className="text__p">
           Recipes for first and second courses, as well as desserts and salads.
@@ -22,7 +22,7 @@ export const Home = () => {
           cook, enjoy. And don't forget to share your recipes.
         </p>
       </div>
-      <h2 className="home__h2">Categorys</h2>
+      <h2 className="home__h2 wrapper">Categorys</h2>
       <div className="categories">
         {categories.map((category) => (
           <div key={category.idCategory}>

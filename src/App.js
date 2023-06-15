@@ -10,10 +10,12 @@ import { Home } from "./pages/Home";
 import { Recipe } from "./pages/Recipe";
 import { Catalog } from "./pages/Сatalog";
 import { ButtonA1 } from "./components/Buttons/ButtonA1";
+import { Footer } from "./components/Footer/Footer";
 
 const App = () => {
   return (
     <>
+    
     <BrowserRouter>
 
       <Header class="header"></Header>
@@ -28,7 +30,8 @@ const App = () => {
       <SliderMy></SliderMy>
 
     </BrowserRouter>
-
+    <Footer> </Footer>
+   
     </>
   );
 };

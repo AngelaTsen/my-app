@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Button, Form, Col, Row } from "react-bootstrap";
+import {Button, Form, Col, Row} from "react-bootstrap";
 import "./UserForm.scss";
 import { Catalog } from "../../pages/Сatalog";
 import { ButtonA3 } from "../Buttons/ButtonA3";
-import "../../images/search.png";
+import "../../styles/_variables.scss";
 
 // import { SliderMyCard } from "../SliderMy/SliderMyCard/SliderMyCard";
 
@@ -47,11 +47,7 @@ export const UserForm = () => {
             value={searchTerm}
             onChange={handleInputChange}
           />
-          <img
-            className="search-icon"
-            src="../../images/search.png"
-            alt="Картинка"
-          />
+           
         </div>
         {/* <ButtonA3 text="Search" for="search-form" variant="outline-secondary" onClick={handleSearch} /> */}
 
@@ -85,87 +81,3 @@ export const UserForm = () => {
     </div>
   );
 };
-
-// import { useState } from "react";
-// import { Button } from "bootstrap";
-
-// const defaultFormValue = {
-//   firstName: "",
-//   lastName: "",
-//   age: "",
-// };
-
-// export const UserForm = () => {
-//   const [formValue, setFormValue] = useState(defaultFormValue);
-
-//   const inputChangeHandler = (value, formControlName) => {
-//     setFormValue((state) => ({ ...formValue, [formControlName]: value }))};
-
-//   const submitHandler = () => {
-//     console.log(formValue);
-//     setFormValue(defaultFormValue);
-//   }
-
-//   return (
-//     <form onSubmit={submitHandler}>
-//       <div className="mb-3">
-//         <label>
-//           First Name
-//           <input
-//             onChange={({ target: { value } }) =>
-//               inputChangeHandler(value, "firstName")
-//             }
-//             value={formValue.firstName}
-//             type="text"
-//             placeholder="Enter Name"
-//           />
-//         </label>
-//       </div>
-
-//       <div className="mb-3">
-//         <label>
-//           Last Name
-//           <input
-//             onChange={({ target: { value } }) =>
-//               inputChangeHandler(value, "lastName")
-//             }
-//             value={formValue.lastName}
-//             type="text"
-//             placeholder="Enter Last Name"
-//           />
-//         </label>
-//       </div>
-//       <div className="mb-3">
-
-//           <input
-//             onChange={({ target: { value } }) =>
-//               inputChangeHandler(Number(value), "age")
-//             }
-//             value={formValue.age}
-//             type="number"
-//             placeholder="Enter Age"
-//           />
-
-//       </div>
-
-//       <button type="submit">Save</button>
-
-//       <div class="multi-icon multi-firstIcon multi-searchIcon">
-//         <svg class="multi-svg" viewBox="0 0 50 50">
-//           <path class="multi-svg-path" d="M23 36c-7.2 0-13-5.8-13-13s5.8-13 13-13 13 5.8 13 13-5.8 13-13 13zm0-24c-6.1 0-11 4.9-11 11s4.9 11 11 11 11-4.9 11-11-4.9-11-11-11z"></path>
-//           <path class="multi-svg-path" d="M32.682 31.267l5.98 5.98-1.414 1.414-5.98-5.98z"></path>
-//         </svg>
-//       </div>
-//       <input
-//             className="multi-input"
-//             onChange={({ target: { value } }) =>
-//               inputChangeHandler(value, "")
-//             }
-//             value={formValue.search}
-//             type="text"
-//             placeholder="Search meal ..."
-//           />
-//     </form>
-
-//   );
-// };
