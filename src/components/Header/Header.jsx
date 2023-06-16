@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { UserForm } from "../UserForm/UserForm";
 import { ButtonA1 } from "../Buttons/ButtonA1";
 import "./Header.scss";
+import "../../images/logo.png";
+
 
 export const Header = ({ children }) => {
   useEffect(() => {

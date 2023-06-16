@@ -1,0 +1,43 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
+@import "../../styles/responsive";
+
+.list {
+    width: 50%;
+  background: $violet;
+  border-radius: 20px;
+  padding: 5%;
+  @include md {
+    width: 100%;
+  }
+  &__h2 {
+    @include fonts($font-m, 36px, 500, 44px, $white);
+    line-height: 1;
+    padding-bottom: 20px;
+  }
+  .list__inp {
+    width: 20px;
+    height: 20px;
+    background-color: $violet;
+    border-radius: 4px;
+    margin: 15px;
+  }
+  .list__inp:checked::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: $white;
+    border-radius: 50%;
+    position: absolute;
+    top: -4px;
+    left: -4px;
+  
+  }
+  &__lab {
+    @include fonts($font-m, 16px, 300, 44px, $white) ;
+    
+}
+}
+
+

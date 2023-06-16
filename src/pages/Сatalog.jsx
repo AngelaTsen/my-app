@@ -6,7 +6,7 @@ import { Card } from 'react-bootstrap';
 
 export const Catalog = ({ strMeal, strCategory, strMealThumb }) => (
       <Card style={{ width: '15rem' }}>
-        <Card.Img variant="top" src={strMealThumb} />
+        <Card.Img className="catalog-img" variant="top" src={strMealThumb} />
         <Card.Body>
           <Card.Title>{strMeal}</Card.Title>
           <Card.Text>{strCategory}</Card.Text>
