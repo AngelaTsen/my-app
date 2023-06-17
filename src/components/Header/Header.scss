@@ -89,6 +89,11 @@
   @include md {
     height: 400px;
   }
+  @include ssm {
+    background: url(../../../public/assets/images/head_320.jpg) no-repeat;
+    height: 300px;
+
+  }
 }
 
 .navbar {

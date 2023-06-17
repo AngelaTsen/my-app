@@ -31,7 +31,6 @@ const App = () => {
 
     </BrowserRouter>
     <Footer> </Footer>
-    <Recipe></Recipe>
    
     </>
   );

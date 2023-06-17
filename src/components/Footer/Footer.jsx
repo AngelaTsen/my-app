@@ -4,7 +4,7 @@ import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 export const Footer = () => (
   <footer className="footer">
     <div className="footer__content wrapper">
-      <img className="footer__logo" src="../../images/logo-white.svg" alt="logo" />
+      <img className="footer__logo" src={require("../../images/logo-white.png")} alt="logo" />
 
       <div className="footer__contact">
         <p className="footer__contact-info">Contact numbers:</p>

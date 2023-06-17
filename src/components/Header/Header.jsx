@@ -36,7 +36,7 @@ export const Header = ({ children }) => {
       {children}
       <div className="header__container wrapper">
         <div className="logo-block">
-          <img src="../../../public/assets/images/logo.png" alt="logo" />
+          <img src={require("../../images/logo.png")} alt="logo" />
         </div>
         <nav>
           <ul className="navbar right-blocks">
