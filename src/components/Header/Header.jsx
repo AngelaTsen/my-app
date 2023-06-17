@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { UserForm } from "../UserForm/UserForm";
 import { ButtonA1 } from "../Buttons/ButtonA1";
 import "./Header.scss";
-import "../../images/logo.png";
 
 
 export const Header = ({ children }) => {
@@ -37,7 +36,7 @@ export const Header = ({ children }) => {
       {children}
       <div className="header__container wrapper">
         <div className="logo-block">
-          <img src="../../images/logo.png" alt="logo" />
+          <img src="../../../public/assets/images/logo.png" alt="logo" />
         </div>
         <nav>
           <ul className="navbar right-blocks">
