@@ -1,5 +1,5 @@
 import "./ButtonA.scss"
 
-export const ButtonA2 = ({ text }) => (
-    <button className="btn-a2">{text}</button>
+export const ButtonA2 = ({ text, href }) => (
+    <a className="btn-a2" href={href}>{text}</a>
   );

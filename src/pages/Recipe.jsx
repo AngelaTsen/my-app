@@ -6,9 +6,12 @@ import {ListIngredients} from '../components/ListIngredients/ListIngredients'
 export const Recipe = () => {
   const [recipes, setRecipes] = useState([]);
 
+
   useEffect(() => {
-    // fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`)
-    fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772")
+    const urlParams = new URLSearchParams(window.location.search);
+    const idMeal = urlParams.get("id");
+
+    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`)
       .then((response) => response.json())
       .then((data) => setRecipes(data.meals))
       .catch((error) => console.error("An error occurred:", error));
@@ -21,7 +24,7 @@ export const Recipe = () => {
           <div className="resipe__icon ">
             <div className="resipe__icon-tag">{resipe.strCategory}</div>
             <div className="resipe__icon-tag">{resipe.strArea}</div>
-            <div className="resipe__icon-tag">{resipe.strTags}</div>
+            {/* <div className="resipe__icon-tag">{resipe.strTags}</div> */}
           </div>
           <h1 className="resipe__h1 ">{resipe.strMeal}</h1>
           <img

@@ -70,7 +70,7 @@ export const SliderMy = () => {
     <Slider {...settings}>
       {blogData.map((item) => (
         <SliderMyCard
-          key={item.idMeal}
+        idMeal={item.idMeal}
           strMeal={item.strMeal}
           strCategory={item.strCategory}
           strMealThumb={item.strMealThumb}

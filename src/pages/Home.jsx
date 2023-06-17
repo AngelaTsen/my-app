@@ -2,6 +2,8 @@ import "../styles/style.scss";
 import { useEffect, useState } from "react";
 import { ButtonA4 } from "../components/Buttons/ButtonA4";
 
+
+
 export const Home = () => {
   const [categories, setCategories] = useState([]);
 
@@ -25,7 +27,7 @@ export const Home = () => {
       <h2 className="home__h2 wrapper">Categorys</h2>
       <div className="categories">
         {categories.map((category) => (
-          <div key={category.idCategory}>
+          <a key={category.idCategory} href={`/catalog?category=${category.strCategory}`}>
             <img
               className="categories__img"
               src={category.strCategoryThumb}
@@ -33,7 +35,7 @@ export const Home = () => {
             />
             <h3 className="categories__h3">{category.strCategory}</h3>
             {/* <ButtonA4 text ="See recipes"></ButtonA4> */}
-          </div>
+          </a>
         ))}
       </div>
     </div>

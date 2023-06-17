@@ -36,28 +36,24 @@ export const Header = ({ children }) => {
       {children}
       <div className="header__container wrapper">
         <div className="logo-block">
-          <img src={require("../../images/logo.png")} alt="logo" />
+          <a href="/"><img src={require("../../images/logo.png")} alt="logo" /></a>
         </div>
         <nav>
           <ul className="navbar right-blocks">
-                 {/* <div className="right-blocks__icon">Starter</div>
-        <div className="right-blocks__icon">Seafood</div>
-        <div className="right-blocks__icon">Vegan</div>
-        <div className="right-blocks__icon">Dessert</div> */}
             <li>
-              <ButtonA1 text="Breakfast" />
+              <ButtonA1 text="Breakfast" href="/catalog?category=Breakfast"/>
             </li>
             <li>
-              <ButtonA1 text="Starter" />
+              <ButtonA1 text="Starter"  href="/catalog?category=Starter"/>
             </li>
             <li>
-              <ButtonA1 text="Seafood" />
+              <ButtonA1 text="Seafood"  href="/catalog?category=Seafood"/>
             </li>
             <li>
-              <ButtonA1 text="Vegan" />
+              <ButtonA1 text="Vegan"  href="/catalog?category=Vegan"/>
             </li>
             <li>
-              <ButtonA1 text="Dessert" />
+              <ButtonA1 text="Dessert"  href="/catalog?category=Dessert"/>
             </li>
           </ul>
           <div className="hamburger">

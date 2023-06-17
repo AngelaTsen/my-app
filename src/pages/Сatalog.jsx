@@ -7,29 +7,40 @@ import { Button, Form, Col, Row } from "react-bootstrap";
 
 export const Catalog = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [categoryTerm, setCategoryTerm] = useState("");
   const [results, setResults] = useState([]);
   const [error, setError] = useState("");
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const searchTermFromUrl = urlParams.get("search");
+    const categoryTermFromUrl = urlParams.get("category");
     setSearchTerm(searchTermFromUrl || "");
+    setCategoryTerm(categoryTermFromUrl || "");
   }, []);
 
   useEffect(() => {
     handleSearch();
-  }, [searchTerm]);
+  }, [searchTerm, categoryTerm]);
 
   const handleSearch = () => {
     setResults([]);
     setError("");
 
-    if (searchTerm === "") {
+    if (searchTerm === "" && categoryTerm === "") {
       setError("Enter search request");
       return;
     }
 
-    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`)
+    const apiUrl = categoryTerm
+      ? `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryTerm}`
+      : `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`;
+
+    // let resultText = categoryTerm
+    // ? `Category  + categoryTerm `
+    // : "Results:";
+
+    fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
         if (!data.meals) {
@@ -48,11 +59,12 @@ export const Catalog = () => {
     <div className="">
       {results.length > 0 && (
         <div>
-          <h3>Результати:</h3>
+          <h3>{categoryTerm ? `Category ` + categoryTerm : "Results:"}</h3>
           <Row>
             {results.map((item) => (
               <Col key={item.idMeal} xs={6} md={4} lg={3}>
                 <CardMy
+                  idMeal={item.idMeal}
                   strMeal={item.strMeal}
                   strCategory={item.strCategory}
                   strMealThumb={item.strMealThumb}
