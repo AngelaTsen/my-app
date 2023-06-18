@@ -1,11 +1,9 @@
 import "../styles/style.scss";
 import { useEffect, useState } from "react";
-import { ButtonA4 } from "../components/Buttons/ButtonA4";
 import {ListIngredients} from '../components/ListIngredients/ListIngredients'
 
 export const Recipe = () => {
   const [recipes, setRecipes] = useState([]);
-
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -24,7 +22,6 @@ export const Recipe = () => {
           <div className="resipe__icon ">
             <div className="resipe__icon-tag">{resipe.strCategory}</div>
             <div className="resipe__icon-tag">{resipe.strArea}</div>
-            {/* <div className="resipe__icon-tag">{resipe.strTags}</div> */}
           </div>
           <h1 className="resipe__h1 ">{resipe.strMeal}</h1>
           <img
@@ -53,7 +50,6 @@ export const Recipe = () => {
     allowFullScreen
   ></iframe>
 </div>
-          {/* <ButtonA4 text="See recipes"></ButtonA4> */}
         </div>
       ))}
     </div>

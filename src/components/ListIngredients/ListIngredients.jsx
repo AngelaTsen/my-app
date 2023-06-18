@@ -3,7 +3,7 @@ import "./ListIngredients.scss";
 
 export const ListIngredients = ({ idMeal }) => {
   const [ingredients, setIngredients] = useState([]);
-  const [showPopup, setShowPopup] = useState(false); // Доданий стан для попапу
+  const [showPopup, setShowPopup] = useState(false); //  попап
 
   useEffect(() => {
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`)

@@ -5,11 +5,6 @@
 * {
   transition: all 0.3s ease-in-out;
 }
-
-// .wrapper {
-//   margin-inline: 5%;
-// }
-
 .header {
   min-height: 50px;
   background-color: #ffffff;
@@ -19,17 +14,16 @@
     display: flex;
     justify-content: space-between;
     margin-inline: 5%;
-
   }
 }
 
 .logo-block {
   margin: 10px;
-  img{ @include ssm {
-    width: 220px;
+  img {
+    @include ssm {
+      width: 220px;
+    }
   }
-  }
- 
 }
 
 .right-blocks {
@@ -44,9 +38,7 @@
       margin-inline: 5px;
       margin-top: 15px;
     }
-
-  
-   }
+  }
 }
 
 .main-banner {
@@ -55,19 +47,12 @@
   background-size: 100%;
   background-repeat: no-repeat;
 
-  // @include sm {
-  //   height: 300px;
-  // }
-  // @include ssm {
-  //   height: 200px;
-  // }
   @include md {
     height: 400px;
   }
   @include ssm {
     background: url(../../../public/assets/images/head_320.jpg) no-repeat;
     height: 290px;
-
   }
 }
 
@@ -77,10 +62,7 @@
   @include lg {
     display: none;
   }
-  
 
-
-    
   &.active {
     position: absolute;
     z-index: 8;
@@ -97,11 +79,10 @@
     @include lg {
       display: block;
     }
-    
   }
 }
 
-.hamburger {    
+.hamburger {
   margin: 35px 0;
   z-index: 12;
   position: relative;
@@ -112,18 +93,17 @@
   @include lg {
     display: block;
   }
-  
-  &__bar{
+
+  &__bar {
     display: block;
     width: 25px;
     height: 3px;
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: $violet;  
-    }
+    background-color: $violet;
+  }
   &.active {
-
     .hamburger__bar:nth-child(2) {
       opacity: 0;
     }

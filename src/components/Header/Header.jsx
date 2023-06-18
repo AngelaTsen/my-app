@@ -3,7 +3,6 @@ import { UserForm } from "../UserForm/UserForm";
 import { ButtonA1 } from "../Buttons/ButtonA1";
 import "./Header.scss";
 
-
 export const Header = ({ children }) => {
   useEffect(() => {
     const hamburger = document.querySelector(".hamburger");
@@ -36,24 +35,26 @@ export const Header = ({ children }) => {
       {children}
       <div className="header__container">
         <div className="logo-block">
-          <a href="/"><img src={require("../../images/logo.png")} alt="logo" /></a>
+          <a href="/">
+            <img src={require("../../images/logo.png")} alt="logo" />
+          </a>
         </div>
         <nav>
           <ul className="navbar right-blocks">
             <li>
-              <ButtonA1 text="Breakfast" href="/catalog?category=Breakfast"/>
+              <ButtonA1 text="Breakfast" href="/catalog?category=Breakfast" />
             </li>
             <li>
-              <ButtonA1 text="Starter"  href="/catalog?category=Starter"/>
+              <ButtonA1 text="Starter" href="/catalog?category=Starter" />
             </li>
             <li>
-              <ButtonA1 text="Seafood"  href="/catalog?category=Seafood"/>
+              <ButtonA1 text="Seafood" href="/catalog?category=Seafood" />
             </li>
             <li>
-              <ButtonA1 text="Vegan"  href="/catalog?category=Vegan"/>
+              <ButtonA1 text="Vegan" href="/catalog?category=Vegan" />
             </li>
             <li>
-              <ButtonA1 text="Dessert"  href="/catalog?category=Dessert"/>
+              <ButtonA1 text="Dessert" href="/catalog?category=Dessert" />
             </li>
           </ul>
           <div className="hamburger">

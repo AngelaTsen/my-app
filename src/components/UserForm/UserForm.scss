@@ -1,14 +1,12 @@
 @import "../../styles/variables";
 @import "../../styles/responsive";
 
-
 * {
   transition: all 0.3s ease-in-out;
 }
 
 .formContainer {
   padding-top: 7%;
-
 }
 
 .btn-search {
@@ -21,7 +19,6 @@
   right: 16%;
   @include ssm {
     right: 8%;
-
   }
 }
 .form-control:focus {
@@ -38,8 +35,7 @@
   @include ssm {
     padding-left: 10px !important;
     padding-right: 100px !important;
-    }
-
+  }
 }
 .search-form {
   margin: 0 auto;
@@ -48,7 +44,6 @@
   transition: max-width 0.5s !important;
   @include ssm {
     max-width: 90%;
-
   }
 }
 .search-form:hover,
@@ -56,27 +51,24 @@
   max-width: 71%;
   @include ssm {
     max-width: 91%;
-
   }
 }
 
 .search-group {
   display: flex;
   align-items: center;
-  // margin-bottom: 1rem;
 }
 
 .search-input-container {
   flex-grow: 1;
-  // max-width: 90%; /* Максимальна ширина контейнера */
 }
 
 .search-form {
   position: relative;
   width: 100%;
   height: 60px;
-  padding-right: 3rem; /*  простір справа для кнопки та іконки */
-  margin: 0 auto; /* Центрування по горизонталі */
+  padding-right: 3rem;
+  margin: 0 auto;
 }
 
 .search-icon {
@@ -94,7 +86,5 @@ input {
   position: relative;
   @include ssm {
     background: none;
-
   }
-
 }

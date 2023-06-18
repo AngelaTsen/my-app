@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Button, Form, Col, Row } from "react-bootstrap";
+import { Button, Form} from "react-bootstrap";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./UserForm.scss";
-import { Catalog } from "../../pages/Сatalog";
-import { CardMy } from "../../components/CardMy/CardMy";
-import { ButtonA3 } from "../Buttons/ButtonA3";
 import "../../styles/_variables.scss";
 
 export const UserForm = () => {
@@ -55,8 +52,6 @@ export const UserForm = () => {
           Search
         </Button>
       </Form.Group>
-
-      {/* Остальной код */}
     </div>
   );
 };

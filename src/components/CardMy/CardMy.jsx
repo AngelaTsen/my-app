@@ -11,7 +11,6 @@ export const CardMy = ({ idMeal, strMeal, strCategory, strMealThumb }) => (
           <Card.Title>{strMeal}</Card.Title>
           <Card.Text>{strCategory}</Card.Text>
           <ButtonA2 text="Read more" href={`/recipe?id=${idMeal}`} />
-          {/* <a variant="primary" href="/recipe" className='button-slik'>Read more</a> */}
         </Card.Body>
       </Card>
   );  

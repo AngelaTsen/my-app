@@ -1,8 +1,5 @@
 import "../styles/style.scss";
 import { useEffect, useState } from "react";
-import { ButtonA4 } from "../components/Buttons/ButtonA4";
-
-
 
 export const Home = () => {
   const [categories, setCategories] = useState([]);
@@ -34,7 +31,6 @@ export const Home = () => {
               alt={category.strCategory}
             />
             <h3 className="categories__h3">{category.strCategory}</h3>
-            {/* <ButtonA4 text ="See recipes"></ButtonA4> */}
           </a>
         ))}
       </div>
@@ -43,39 +39,3 @@ export const Home = () => {
 };
 
 export default Home;
-
-// import "../styles/style.scss";
-// import { useEffect, useState } from "react";
-// import { Category} from "../components/Category/Category";
-
-// export const Home = () => {
-//   const [blogData, setBlogData] = useState([]);
-
-//   useEffect(() => {
-//     fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
-//       .then((response) => response.json())
-//       .then((responseData) => setBlogData(responseData.meals))
-//       .catch((error) => console.log(error));
-//   }, []);
-
-//   return (
-//     <div className="home">
-//       <h1 className="home-h1">Simple recipes for delicious dishes</h1>
-//       <p className="home-p">
-//         Recipes for first and second courses, as well as desserts and salads.
-//         Thousands of ideas for what to cook for breakfast or dinner. Read, cook,
-//         enjoy. And don't forget to share your recipes.
-//       </p>
-
-//       {blogData.map((item) => (
-//         <Category
-//           key={item.idCategory}
-//           strCategoryThumb={item.strCategoryThumb}
-//           strCategory={item.strCategory}
-//         />
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default Home;
