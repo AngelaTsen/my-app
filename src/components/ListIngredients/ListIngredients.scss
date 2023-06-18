@@ -15,7 +15,10 @@
     line-height: 1;
     padding-bottom: 20px;
   }
+&__p {
+  @include fonts($font-m, 14px, 300, 40px, $white);
 
+}
   .list__inp {
     margin-right: 25px;
     appearance: none;
@@ -44,4 +47,44 @@
   &__lab {
     @include fonts($font-m, 18px, 300, 37px, $white);
   }
+}
+.popup {
+&-h3 {
+  margin-top: 15px;
+  @include fonts($font-m, 18px, 700, 37px, $white);
+}
+&-li {
+  @include fonts($font-m, 18px, 300, 37px, $white);
+}
+&-button {
+  margin-top: 20px;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  align-items: center;
+  background: $violet;
+  border: 1px solid $white;
+  border-radius: 30px;
+  color: $white;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  @include fonts($font-m, 14px, 300, 18px, $white);
+  justify-content: center;
+  line-height: 1;
+  min-height: 35px;
+  min-width: 90px;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+
+  z-index: 99;
+  position: relative;
+}
+&-button:hover {
+  color: $violet;
+  background-color: $white;
+}
 }
