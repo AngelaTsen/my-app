@@ -37,9 +37,6 @@ export const Catalog = () => {
       ? `https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryTerm}`
       : `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`;
 
-    // let resultText = categoryTerm
-    // ? `Category  + categoryTerm `
-    // : "Results:";
 
     fetch(apiUrl)
       .then((response) => response.json())
@@ -60,14 +57,14 @@ export const Catalog = () => {
     <div className="wrapper">
       {results.length > 0 && (
         <div>
-          <h3>{categoryTerm ? `Category ` + categoryTerm : "Results:"}</h3>
+          <h3>{categoryTerm ? `Category: ` + categoryTerm : "Results:"}</h3>
           <Row>
             {results.map((item) => (
               <Col key={item.idMeal} xs={6} md={4} lg={3}>
                 <CardMy
                   idMeal={item.idMeal}
                   strMeal={item.strMeal}
-                  strCategory={item.strCategory}
+                  strCategory={categoryTerm ? categoryTerm : item.strCategory} 
                   strMealThumb={item.strMealThumb}
                 />
               </Col>

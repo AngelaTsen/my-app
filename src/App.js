@@ -9,7 +9,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Recipe } from "./pages/Recipe";
 import { Catalog } from "./pages/Сatalog";
-import { ButtonA1 } from "./components/Buttons/ButtonA1";
 import { Footer } from "./components/Footer/Footer";
 
 const App = () => {

@@ -40,9 +40,9 @@
     list-style: none;
     margin-inline: 10px;
     margin-top: 10px;
-    @include md {
+    @include lg {
       margin-inline: 5px;
-      margin-top: 50px;
+      margin-top: 15px;
     }
 
   
@@ -66,7 +66,7 @@
   }
   @include ssm {
     background: url(../../../public/assets/images/head_320.jpg) no-repeat;
-    height: 300px;
+    height: 290px;
 
   }
 }
@@ -74,15 +74,10 @@
 .navbar.right-blocks {
   display: inline-flex;
 
-  @include md {
+  @include lg {
     display: none;
   }
-  @include sm {
-    display: none;
-  }
-  @include ssm {
-    display: none;
-  }
+  
 
 
     
@@ -93,21 +88,16 @@
     top: -15px;
     width: 100%;
     left: -10px;
-    padding: 0 30px 30px 30px;
+    padding: 20px 30px 20px 50px;
 
     &__link {
       width: 100%;
       background-color: white;
     }
-    @include md {
+    @include lg {
       display: block;
     }
-    @include sm {
-      display: block;
-    }
-    @include ssm {
-      display: block;
-    }
+    
   }
 }
 
@@ -119,15 +109,10 @@
   margin-left: 15px;
   cursor: pointer;
 
-  @include md {
+  @include lg {
     display: block;
   }
-  @include sm {
-    display: block;
-  }
-  @include ssm {
-    display: block;
-  }
+  
   &__bar{
     display: block;
     width: 25px;

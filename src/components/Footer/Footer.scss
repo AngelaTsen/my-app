@@ -34,8 +34,7 @@
     }
     
     &__logo {
-      // width: 100px;
-      // height: 100px;
+    cursor: pointer;
       @include md {
         display: none;
     }}
@@ -52,6 +51,9 @@
         @include ssm {
             margin-top: 15px;
         }
+      }
+      &-icon:hover {
+      opacity: 0.8;
       }
     }
     

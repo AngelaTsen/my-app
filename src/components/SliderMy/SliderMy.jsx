@@ -24,8 +24,8 @@ export const SliderMy = () => {
     slidesToShow: 8,
     slidesToScroll: 3,
     autoplay: true,
-    speed: 7000,
-    autoplaySpeed: 2000,
+    speed: 8000,
+    autoplaySpeed: 5000,
     cssEase: "linear",
     responsive: [
         {
@@ -59,8 +59,8 @@ export const SliderMy = () => {
         {
             breakpoint: 320,
             settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
+              slidesToShow: 1,
+              slidesToScroll: 3,
             },
           },
       ],

@@ -1,99 +1,112 @@
 @import "../../styles/variables";
+@import "../../styles/responsive";
 @import "../../styles/mixins";
 
 .btn-a1 {
--webkit-box-align: center;
--webkit-box-pack: center;
--ms-flex-pack: center;
-align-items: center;
-background: $violet;
-border: 0;
-border-radius: 30px;
-color: $white;
-cursor: pointer;
-display: -webkit-inline-box;
-display: -ms-inline-flexbox;
-display: inline-flex;
-@include fonts ($font-m, 16px, 500, 26px, $white);
-justify-content: center;
-line-height: 1;
-min-height: 45px;
-min-width: 100px;
-padding: 10px;
-text-align: center;
-vertical-align: middle;
-text-decoration: none;
-cursor: pointer;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  align-items: center;
+  background: $violet;
+  border: 0;
+  border-radius: 30px;
+  color: $white;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  @include fonts($font-m, 16px, 500, 26px, $white);
+  justify-content: center;
+  line-height: 1;
+  min-height: 45px;
+  min-width: 100px;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  cursor: pointer;
+  @include lg {
+    @include fonts($font-m, 16px, 500, 18px, $violet);
+    justify-content: center;
+    min-height: 40px;
+    min-width: 100px;
+    padding: 0;
+    background: $white;
+  }
 }
 
-.btn-a1:hover {
-color: $violet;
-   background-color:$white;
-   border: 3px solid $violet;
+.btn-a1:hover,
+.btn-a1:active {
+  color: $violet;
+  background-color: $white;
+  border: 3px solid $violet;
+  @include lg {
+    // color: $violet1;
+    background-color: $violet1;
+    border: none;
   }
+}
 
 .btn-a2 {
   -webkit-box-align: center;
-   -webkit-box-pack: center;
-   -ms-flex-pack: center;
-   align-items: center;
-   background: $violet;
-   border: 0;
-   border-radius: 30px;
-   color: $white;
-   cursor: pointer;
-   display: -webkit-inline-box;
-   display: -ms-inline-flexbox;
-   display: inline-flex;
-   @include fonts ($font-m, 14px, 300, 18px, $white);
-   justify-content: center;
-   line-height: 1;
-   min-height: 35px;
-   min-width: 90px;
-   padding: 10px;
-   text-align: center;
-   vertical-align: middle;
-   text-decoration: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  align-items: center;
+  background: $violet;
+  border: 0;
+  border-radius: 30px;
+  color: $white;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  @include fonts($font-m, 14px, 300, 18px, $white);
+  justify-content: center;
+  line-height: 1;
+  min-height: 35px;
+  min-width: 90px;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
 
-   z-index: 99;
-   position: relative;
+  z-index: 99;
+  position: relative;
 }
 .btn-a2:hover {
-   color: $violet;
-   background-color:$white;
-   border: 1px solid $violet;
+  color: $violet;
+  background-color: $white;
+  border: 1px solid $violet;
 }
 .btn-a3 {
-    @include fonts ($font-m, 14px, 300, 18px, $violet);
-    border-radius: 30px;
-    min-height: 35px;
-    min-width: 90px;
-    -webkit-box-align: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    align-items: center;
+  @include fonts($font-m, 14px, 300, 18px, $violet);
+  border-radius: 30px;
+  min-height: 35px;
+  min-width: 90px;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  align-items: center;
   border: 2px solid $violet;
 }
 .btn-a3:hover {
-    background-color: $violet;
-    color: $white ;
-    // @include fonts ($font-m, 14px, 300, 18px, $white);
+  background-color: $violet;
+  color: $white;
+  // @include fonts ($font-m, 14px, 300, 18px, $white);
 }
 
-
-  .btn-a4 {
-  @include fonts ($font-m, 14px, 300, 18px, $violet);
+.btn-a4 {
+  @include fonts($font-m, 14px, 300, 18px, $violet);
   background-color: $white;
   border-radius: 30px;
   min-height: 35px;
   min-width: 90px;
-border: 2px solid $violet1;
-display: block;
-margin: 0 auto;
-
+  border: 2px solid $violet1;
+  display: block;
+  margin: 0 auto;
 }
 .btn-a4:hover {
   background-color: $violet;
-  color: $white ;
+  color: $white;
   // @include fonts ($font-m, 14px, 300, 18px, $white);
 }
