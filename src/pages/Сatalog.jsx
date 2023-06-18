@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { CardMy } from "../components/CardMy/CardMy";
-import "../components/SliderMy/SliderMy.scss";
+// import "../components/SliderMy/SliderMy.scss";
+import "../styles/style.scss"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Button, Form, Col, Row } from "react-bootstrap";
@@ -56,7 +57,7 @@ export const Catalog = () => {
   };
 
   return (
-    <div className="">
+    <div className="wrapper">
       {results.length > 0 && (
         <div>
           <h3>{categoryTerm ? `Category ` + categoryTerm : "Results:"}</h3>

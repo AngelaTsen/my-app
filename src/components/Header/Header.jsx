@@ -34,7 +34,7 @@ export const Header = ({ children }) => {
   return (
     <header className="header main-banner">
       {children}
-      <div className="header__container wrapper">
+      <div className="header__container">
         <div className="logo-block">
           <a href="/"><img src={require("../../images/logo.png")} alt="logo" /></a>
         </div>

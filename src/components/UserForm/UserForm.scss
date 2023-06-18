@@ -1,11 +1,14 @@
 @import "../../styles/variables";
+@import "../../styles/responsive";
+
 
 * {
   transition: all 0.3s ease-in-out;
 }
 
-.formConteiner {
+.formContainer {
   padding-top: 7%;
+
 }
 
 .btn-search {
@@ -16,6 +19,10 @@
   color: $white !important;
   position: absolute;
   right: 16%;
+  @include ssm {
+    right: 8%;
+
+  }
 }
 .form-control:focus {
   border-color: $violet1 !important;
@@ -28,16 +35,29 @@
 .form-control {
   padding-left: 75px !important;
   padding-right: 100px !important;
+  @include ssm {
+    padding-left: 10px !important;
+    padding-right: 100px !important;
+    }
+
 }
 .search-form {
   margin: 0 auto;
   max-width: 70%;
   height: 60px;
   transition: max-width 0.5s !important;
+  @include ssm {
+    max-width: 90%;
+
+  }
 }
 .search-form:hover,
 .search-form:active {
   max-width: 71%;
+  @include ssm {
+    max-width: 91%;
+
+  }
 }
 
 .search-group {
@@ -72,4 +92,9 @@ input {
   background-position-y: center;
   background-position-x: 15px;
   position: relative;
+  @include ssm {
+    background: none;
+
+  }
+
 }

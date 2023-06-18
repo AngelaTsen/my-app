@@ -5,7 +5,7 @@ import { ButtonA2 } from "../Buttons/ButtonA2";
 import { Card } from 'react-bootstrap';
 
 export const CardMy = ({ idMeal, strMeal, strCategory, strMealThumb }) => (
-      <Card style={{ width: '15rem' }}>
+      <Card className="card-my" style={{ width: '15rem' }}>
         <Card.Img className="catalog-img" variant="top" src={strMealThumb} />
         <Card.Body>
           <Card.Title>{strMeal}</Card.Title>

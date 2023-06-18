@@ -3,7 +3,10 @@
 @import "./_responsive.scss";
 
 .wrapper {
-  margin-inline: 5%;
+  margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    width: 100%;
 }
 .catalog-img{
   object-fit: cover;
@@ -68,6 +71,10 @@
       text-align: center;
       width: 65px;
       padding-top: 15%;
+    }
+
+    a {
+      text-decoration: none;
     }
   }
 }
@@ -138,4 +145,27 @@ padding-bottom: 50px;
   padding: 30px 0;
   }
 }
+}
+
+.card{
+
+  &-my{
+  margin: 25px 0;
+  height: 300px!important;
+  }
+
+  &-title{
+  height: 50px!important;
+
+  overflow-x: hidden;
+  }
+
+//   &-body:before{
+//     content:"";
+//     display:block;
+//     height:20px;
+//     position:relative;
+//     top:80px;
+//     background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff 75%)
+// }
 }
