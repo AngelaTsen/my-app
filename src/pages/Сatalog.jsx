@@ -60,7 +60,7 @@ export const Catalog = () => {
           <h3>{categoryTerm ? `Category: ` + categoryTerm : "Results:"}</h3>
           <Row>
             {results.map((item) => (
-              <Col key={item.idMeal} xs={6} md={4} lg={3}>
+              <Col key={item.idMeal} xs={7} md={5} lg={3}>
                 <CardMy
                   idMeal={item.idMeal}
                   strMeal={item.strMeal}

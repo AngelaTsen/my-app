@@ -11,7 +11,6 @@ export const ListIngredients = ({ idMeal }) => {
         const meal = data.meals[0];
         const ingredientsList = [];
 
-        // Collect non-empty ingredient and measure pairs
         for (let i = 1; i <= 20; i++) {
           const ingredient = meal[`strIngredient${i}`];
           const measure = meal[`strMeasure${i}`];
@@ -33,7 +32,7 @@ export const ListIngredients = ({ idMeal }) => {
          
           <input className='list__inp' type="checkbox" id={`ingredient-${index}`} />
           <label className='list__lab' htmlFor={`ingredient-${index}`}>
-            {ingredient.ingredient} - <b>{ingredient.measure}</b>
+          {ingredient.ingredient} - <b>{ingredient.measure}</b>
           </label>
           </div>
       
@@ -41,8 +40,4 @@ export const ListIngredients = ({ idMeal }) => {
     </div>
   );
 };
-
 export default ListIngredients;
-
-
-

@@ -3,7 +3,7 @@
 @import "../../styles/responsive";
 
 .list {
-    width: 50%;
+  width: 50%;
   background: $violet;
   border-radius: 20px;
   padding: 5%;
@@ -11,33 +11,37 @@
     width: 100%;
   }
   &__h2 {
-    @include fonts($font-m, 36px, 500, 44px, $white);
+    @include fonts($font-m, 36px, 500, 40px, $white);
     line-height: 1;
     padding-bottom: 20px;
   }
+
   .list__inp {
-    width: 20px;
-    height: 20px;
-    background-color: $violet;
+    margin-right: 25px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #fff;
     border-radius: 4px;
-    margin: 15px;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    position: relative;
   }
+
   .list__inp:checked::before {
-    content: '';
-    display: block;
-    width: 30px;
-    height: 30px;
-    background-color: $white;
-    border-radius: 50%;
+    content: "\2713"; /* символ галочки */
     position: absolute;
-    top: -4px;
-    left: -4px;
-  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: #fff;
   }
+
   &__lab {
-    @include fonts($font-m, 16px, 300, 44px, $white) ;
-    
+    @include fonts($font-m, 18px, 300, 37px, $white);
+  }
 }
-}
-
-
