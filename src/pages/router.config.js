@@ -2,7 +2,7 @@ import * as React from "react";
 import {createBrowserRouter} from "react-router-dom";
 import {Home} from "./Home";
 import {Recipe} from "./Recipe";
-import {Сatalog} from "./Сatalog";
+import {Catalog} from "./Catalog";
 
 
 const router = createBrowserRouter([
@@ -12,7 +12,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <Сatalog />,
+    element: <Catalog />,
   }, 
   {
     path: "/",

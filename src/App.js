@@ -6,7 +6,7 @@ import { SliderMy } from "./components/SliderMy/SliderMy";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Recipe } from "./pages/Recipe";
-import { Catalog } from "./pages/Сatalog";
+import { Catalog } from "./pages/Catalog";
 import { Footer } from "./components/Footer/Footer";
 
 const App = () => {
