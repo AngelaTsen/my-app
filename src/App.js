@@ -19,7 +19,6 @@ const App = () => {
           <Route path="/recipe" element={<Recipe />} />
           <Route path="/catalog" element={<Catalog />} />
         </Routes> 
-      <div className="title">Сhoose a dish that you like:</div>
       <SliderMy></SliderMy>
     </BrowserRouter>
     <Footer> </Footer>
